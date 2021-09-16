@@ -1,0 +1,4 @@
+.card li{
+    display: flex;
+    justify-content: start;
+}
