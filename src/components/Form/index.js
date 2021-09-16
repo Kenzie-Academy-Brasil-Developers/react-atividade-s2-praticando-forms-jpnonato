@@ -58,7 +58,7 @@ const Form = () => {
                 <input placeholder="Endereço*" {...register("Adress")}></input>
                 {errors.Adress && errors.Adress.message}
 
-                <input placeholder="Data de nascimento*" {...register("Age")}></input>
+                <input placeholder="Idade*" {...register("Age")}></input>
                 {errors.Age && errors.Age.message}
             </section>
             <button type="submit">submit</button>
