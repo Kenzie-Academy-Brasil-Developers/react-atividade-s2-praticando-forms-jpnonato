@@ -17,7 +17,7 @@ const Form = () => {
         Email: yup.string().required("E-mail é obrigatório").email("E-mail inválido"), 
         Password: yup.string().required("Password é obrigatório")
         .matches(/^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/, "Sua senha deve possuir no mínimo 8 caracteres, um caracter especial, uma letra maiúscula e uma minúscula"),
-        Validarpassword: yup.string().required("Você deve confirmar sua senha!").oneOf([yup.ref("Password")]),
+        Validarpassword: yup.string().required("Você deve confirmar sua senha!").oneOf([yup.ref("Password")], "Senha não confere com a senha criada acima!"),
         Tel: yup.string().required("Telefone é obrigatório").matches(/^.(?=.[0-9])(?=.{10,}).*$/, "numero de telefone inválido"),
         Adress: yup.string().required("Endereço é obrigatório"),
         Age: yup.string().required("Idade é obrigatório")    
